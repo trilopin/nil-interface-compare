@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/trilopin/nil-interface-compare/pkg/analyzer"
+	"github.com/trilopin/nilinterfacecompare/pkg/analyzer"
 	"golang.org/x/tools/go/analysis/singlechecker"
 )
 
