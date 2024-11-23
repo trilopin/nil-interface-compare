@@ -1,16 +1,12 @@
 package nilinterfacecompare
 
 import (
-	"fmt"
-
 	"github.com/golangci/plugin-module-register/register"
 	"golang.org/x/tools/go/analysis"
 )
 
 func init() {
-	fmt.Println("Registering nilinterfacecompare")
 	register.Plugin("nilinterfacecompare", NewLinter)
-	fmt.Println("Registered nilinterfacecompare")
 }
 
 type NilInterfaceCompare struct{}

@@ -10,7 +10,7 @@ import (
 const errMessage = "\"%s\" is an interface and must not be compared to nil. Check your interface usage or compare against reflect.Valueof"
 
 var Analyzer = &analysis.Analyzer{
-	Name: "nilinterface",
+	Name: "nilinterfacecompare",
 	Doc:  "Check that there are no comparison between interfaces and nil",
 	Run:  run,
 }
