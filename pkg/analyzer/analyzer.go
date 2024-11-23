@@ -1,5 +1,8 @@
 package analyzer
 
+// Analyzer package covers the pure go-toolchain implementation for nil-interface comparison linter
+// Tool-specific code (like golangci integration) live outside this package
+
 import (
 	"go/ast"
 	"go/types"
@@ -10,7 +13,7 @@ import (
 const errMessage = "\"%s\" is an interface and must not be compared to nil. Check your interface usage or compare against reflect.Valueof"
 
 var Analyzer = &analysis.Analyzer{
-	Name: "nilinterface",
+	Name: "nilinterfacecompare",
 	Doc:  "Check that there are no comparison between interfaces and nil",
 	Run:  run,
 }
