@@ -1,4 +1,7 @@
-package nilinterfacecompare
+package analyzer
+
+// Analyzer package covers the pure go-toolchain implementation for nil-interface comparison linter
+// Tool-specific code (like golangci integration) live outside this package
 
 import (
 	"go/ast"

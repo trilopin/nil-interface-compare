@@ -1,7 +1,10 @@
 package nilinterfacecompare
 
+// Registration code for golangci-lint integration
+
 import (
 	"github.com/golangci/plugin-module-register/register"
+	nilanalyzer "github.com/trilopin/nilinterfacecompare/pkg/analyzer"
 	"golang.org/x/tools/go/analysis"
 )
 
@@ -16,7 +19,7 @@ func NewLinter(_ any) (register.LinterPlugin, error) {
 }
 
 func (f *NilInterfaceCompare) BuildAnalyzers() ([]*analysis.Analyzer, error) {
-	return []*analysis.Analyzer{Analyzer}, nil
+	return []*analysis.Analyzer{nilanalyzer.Analyzer}, nil
 }
 
 func (f *NilInterfaceCompare) GetLoadMode() string {

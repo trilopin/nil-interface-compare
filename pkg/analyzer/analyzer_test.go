@@ -1,4 +1,4 @@
-package nilinterfacecompare
+package analyzer
 
 import (
 	"os"
