@@ -16,7 +16,7 @@ func NewLinter(_ any) (register.LinterPlugin, error) {
 }
 
 func (f *NilInterfaceCompare) BuildAnalyzers() ([]*analysis.Analyzer, error) {
-	return []*analysis.Analyzer{&analysis.Analyzer{}}, nil
+	return []*analysis.Analyzer{Analyzer}, nil
 }
 
 func (f *NilInterfaceCompare) GetLoadMode() string {
